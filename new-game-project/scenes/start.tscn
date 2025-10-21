@@ -1,28 +1,44 @@
-[gd_scene format=3 uid="uid://c4t3sdr8gxb37"]
+[gd_scene load_steps=5 format=3 uid="uid://c4t3sdr8gxb37"]
+
+[ext_resource type="Script" uid="uid://cdkg51k3c6o1n" path="res://scripts/start_scene.gd" id="1_kdmts"]
+[ext_resource type="Script" uid="uid://2xbhftcijvcg" path="res://scripts/draw.gd" id="2_0auqf"]
+[ext_resource type="Script" uid="uid://bjc1wfxecsdyi" path="res://scripts/inspo.gd" id="3_y16t7"]
+[ext_resource type="Script" uid="uid://b5rn0g7au8yub" path="res://scripts/tut.gd" id="4_4ge6i"]
 
 [node name="Node" type="Node"]
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="startScene" type="Node2D" parent="."]
+script = ExtResource("1_kdmts")
 
-[node name="TextureRect" type="TextureRect" parent="Node2D"]
+[node name="TextureRect" type="TextureRect" parent="startScene"]
 offset_right = 1164.0
 offset_bottom = 655.0
 
-[node name="draw" type="Button" parent="Node2D"]
+[node name="drawBtn" type="Button" parent="startScene"]
 offset_left = 567.0
 offset_top = 422.0
 offset_right = 575.0
 offset_bottom = 430.0
 scale = Vector2(11.6346, 3.69014)
+script = ExtResource("2_0auqf")
 
-[node name="inspo" type="Button" parent="Node2D"]
+[node name="inspoBtn" type="Button" parent="startScene"]
 offset_left = 569.0
 offset_top = 487.0
 offset_right = 577.0
 offset_bottom = 495.0
 scale = Vector2(11.6346, 3.69014)
+script = ExtResource("3_y16t7")
 
-[node name="logo" type="TextureRect" parent="Node2D"]
+[node name="tutBtn" type="Button" parent="startScene"]
+offset_left = 575.0
+offset_top = 550.0
+offset_right = 583.0
+offset_bottom = 558.0
+scale = Vector2(11.6346, 3.69014)
+script = ExtResource("4_4ge6i")
+
+[node name="logo" type="TextureRect" parent="startScene"]
 offset_left = 556.0
 offset_top = 181.0
 offset_right = 596.0
